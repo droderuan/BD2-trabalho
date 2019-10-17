@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'MeusFilmes/style.css' %}" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <form>
+                <a href="{% url 'cadastrar' %}">            
+                <input type="button" name="Adicionar" value="Adicionar"></a>
+                <a href="{% url 'deletar' %}">   
+                <input type="button" name="Deletar" value="Deletar"></a>
+                <a href="{% url 'modificar' %}">   
+                <input type="button" name="Modificar" value="Modificar"></a>
+                <a href="{% url 'vistos' %}">   
+                <input type="button" name="Vistos" value="Já vistos"></a>
+            </form>
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

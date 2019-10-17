@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block content %}
+
+<form method="POST" action="{% url 'deletar' %}">
+    {% csrf_token %}
+    <p>Titulo do filme para deletar</p>
+    <input type="text" name="title">
+    <br>
+    <br>
+    <input type="submit" value="Deletar">
+    
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block content %}
+
+<form method="POST" action="{% url 'cadastrar' %}">
+    {% csrf_token %}
+    <p>Titulo</p>
+    <input type="text" name="title">
+    <br>
+    <br>
+    <p>Ano</p>
+    <input type="text" name="ano">
+    <p>Já viu?</p>
+    <input type="radio" name="visto" value="true" id="true">
+    <label for="true">Sim</label>
+    <input type="radio" name="visto" value="false" id="false">
+    <label for="true">Nao</label>
+    <br>
+    <br>
+    <input type="submit" value="Adicionar">
+    
+</form>
+
+
+{% endblock %}

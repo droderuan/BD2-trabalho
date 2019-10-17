@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block content %}
+
+{% for filme in filmes %}
+    {% if filme.visto %}
+        <div class="card">
+            <div class="img"></div>
+            <div class="card-content">
+                <span> {{ filme.title }} </span>
+                <p> {{filme.ano}}</p>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}

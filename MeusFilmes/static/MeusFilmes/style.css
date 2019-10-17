@@ -1,0 +1,15 @@
+body {
+    background: #a1e4ff url('../bg.jpg');
+    color: #3b3939;
+    background-size: cover;  /* para cobrir toda a tela, se adapta*/
+    -webkit-font-smoothing: antialiased !important; /*deixa a fonte mais detalhada*/
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  }
+
+  .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      background: #eef11d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }

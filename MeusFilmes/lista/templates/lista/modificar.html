@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block content %}
+
+<form method="POST" action="{% url 'modificar' %}">
+    {% csrf_token %}
+    <p>Digite o Titulo do filme que quer modificar</p>
+    <input type="text" name="title">
+    <br>
+    <br>
+    <p>Já viu?</p>
+    <input type="radio" name="visto" value="true" id="true">
+    <label for="true">Sim</label>
+    <input type="radio" name="visto" value="false" id="false">
+    <label for="true">Nao</label>
+    <br>
+    <br>
+    <input type="submit" value="Modificar">
+    
+</form>
+
+
+{% endblock %}
